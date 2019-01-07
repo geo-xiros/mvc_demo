@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MVCDemo.Models.Customer>
+@{
+    ViewBag.Title = "Model page";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<h4>@ViewBag.Name</h4>
+
+<ul>
+    @foreach (var c in ViewBag.Name)
+    {
+        <li>@c</li>
+    }
+</ul>
+
+@{
+    var i = 0;
+    var s = "test";
+}
+<p>@s</p>
+
+<p>@ViewBag.Customer.Name</p>
+<p>@ViewBag.Customer.Balance</p>
+<p>@ViewBag.Customer.Birthday</p>
+<p>@ViewBag.Customer.NumberOfChildren</p>
+<p></p>
+@foreach (var customer in Model)
+{
+    @Html.Partial("~/Views/Partials/CustomerDetails.cshtml", customer)
+}
+
+<p>@Html.ActionLink("Go to about link", "About", "Home", new { @class = "test" })</p>
