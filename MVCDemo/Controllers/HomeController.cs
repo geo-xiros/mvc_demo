@@ -63,7 +63,17 @@ namespace MVCDemo.Controllers
                 NumberOfChildren = 1
             };
 
-            var customerList = new List<Customer>(new[] { customer, customer, customer });
+            using (var dbContext = new MyDbContext())
+            {
+                dbContext.Customers.Add(customer);
+                dbContext.SaveChanges();
+            }
+
+
+
+
+
+                var customerList = new List<Customer>(new[] { customer, customer, customer });
             
             ViewBag.Message = "Model page";
             ViewBag.Name = "My name";
