@@ -54,7 +54,7 @@ namespace MVCDemo.Controllers
             //d.Action = new Action(Console.WriteLine);
 
             // 9999999999999999.0 - 9999999999999998.0
-
+            
             var customer = new Customer()
             {
                 Name = "First Last",
@@ -62,13 +62,23 @@ namespace MVCDemo.Controllers
                 Birthday = DateTime.Today.AddYears(-30),
                 NumberOfChildren = 1
             };
+            var invoice = new Invoice()
+            {
+                Customer = customer,
+                Amount = 300.50m,
+                Date = DateTime.Today
+            };
 
             using (var dbContext = new MyDbContext())
             {
                 dbContext.Customers.Add(customer);
+                dbContext.Invoices.Add(invoice);
                 dbContext.SaveChanges();
             }
 
+           
+
+            
 
 
 

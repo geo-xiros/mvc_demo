@@ -5,9 +5,9 @@
     <Setting Name="dbcon" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Server=localhost;Database=mvc;User Id=testuser;Password=testpass&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Server=DESKTOP-7TA49AR\SQLEXPRESS;Database=mvc;User Id=testuser;Password=testpass&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Server=localhost;Database=mvc;User Id=testuser;Password=testpass</Value>
+      <Value Profile="(Default)">Server=DESKTOP-7TA49AR\SQLEXPRESS;Database=mvc;User Id=testuser;Password=testpass</Value>
     </Setting>
   </Settings>
 </SettingsFile>
