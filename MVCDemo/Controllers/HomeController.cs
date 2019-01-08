@@ -90,5 +90,28 @@ namespace MVCDemo.Controllers
             ViewBag.Customer = customer;
             return View(customerList);
         }
+        public ActionResult Invoice()
+        {
+            var customer = new Customer()
+            {
+                Name = "George Xiros",
+                Balance = 100,
+                Birthday = DateTime.Today.AddYears(-42),
+                NumberOfChildren = 1
+            };
+            var invoice = new Invoice()
+            {
+                Customer = customer,
+                Amount = 300.50m,
+                Date = DateTime.Today
+            };
+
+            using (var dbContext = new MyDbContext())
+            {
+                dbContext.Invoices.Add(invoice);
+                dbContext.SaveChanges();
+            }
+            return View(invoice);
+        }
     }
 }

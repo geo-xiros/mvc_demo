@@ -1,0 +1,12 @@
+﻿@model MVCDemo.Models.Invoice
+
+@{
+    ViewBag.Title = "Invoice";
+}
+
+<h1>Invoice Created!</h1>
+
+<p>Invoice Id: @Model.InvoiceNo</p>
+<p>Invoice Date: @Model.Date</p>
+<p>Invoice Customer Name: @Model.Customer.Name</p>
+

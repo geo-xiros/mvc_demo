@@ -14,9 +14,9 @@ namespace MVCDemo.Models
         public int InvoiceNo { get; set; }
         public DateTime Date { get; set; }
         public decimal Amount { get; set; }
-        public int CustomerId { get; set; }
+        public virtual int CustomerId { get; set; }
         [ForeignKey("CustomerId")]
-        public Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; }
 
     }
 }
